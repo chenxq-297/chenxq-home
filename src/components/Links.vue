@@ -4,7 +4,7 @@
       <Icon size="20">
         <Link />
       </Icon>
-      <span class="title">网站列表</span>
+      <span class="title">文档列表</span>
     </div>
     <!-- 网站列表 -->
     <Swiper
@@ -43,13 +43,13 @@
 <script setup>
 import { Icon } from "@vicons/utils";
 // 可前往 https://www.xicons.org 自行挑选并在此处引入
-import { Link, Blog, CompactDisc, Cloud, Compass, Book, Fire, LaptopCode } from "@vicons/fa"; // 注意使用正确的类别
-import { mainStore } from "@/store";
+import { Link, Blog, CompactDisc, Cloud, Compass, Book, Fire, LaptopCode,React,Html5,Node,Vuejs,JsSquare } from "@vicons/fa"; // 注意使用正确的类别
+// import { mainStore } from "@/store";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Mousewheel } from "swiper";
 import siteLinks from "@/assets/siteLinks.json";
 
-const store = mainStore();
+// const store = mainStore();
 
 // 计算网站链接
 const siteLinksList = computed(() => {
@@ -70,14 +70,26 @@ const siteIcon = {
   Book,
   Fire,
   LaptopCode,
+  React,
+  Html5,
+  JsSquare,
+  Vuejs,
+  Node
 };
 
 // 链接跳转
+// const jumpLink = (data) => {
+//   if (data.name === "音乐" && store.musicClick) {
+//     if (typeof $openList === "function") $openList();
+//   } else {
+//     window.open(data.link, "_blank");
+//   }
+// };
 const jumpLink = (data) => {
-  if (data.name === "音乐" && store.musicClick) {
-    if (typeof $openList === "function") $openList();
-  } else {
+  if(data.link){
     window.open(data.link, "_blank");
+  }else{
+    ElMessage('文档正在整理中 ~ ')
   }
 };
 

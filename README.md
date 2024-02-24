@@ -94,6 +94,7 @@ docker run -p 12445:12445 -d home
 // 可前往 https://www.xicons.org 自行挑选并在此处引入
 // 此处引入的是 fa 类型
 import {
+  Html5,
   Link,
   Blog,
   CompactDisc,
