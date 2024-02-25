@@ -1,8 +1,5 @@
 # .github/workflows/buildAndDeploy.yml
 
-# 自动发布
-# https://github.com/marketplace/actions/deploy-to-github-pages
-
 name: Build and Deploy
 
 on:
@@ -24,7 +21,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          # branch: dev # The branch the action should deploy to.
+          branch: dev # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
       - name: Start HTTP server 🌐
         run: |
