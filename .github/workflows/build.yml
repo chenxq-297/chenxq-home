@@ -1,46 +1,25 @@
-name: GitHub Actions Build and Deploy Demo
+# .github/workflows/buildAndDeploy.yml
+
+name: Build and Deploy
 
 on:
-
-  push:
-
-    branches:
-
-     - master
+  push:
+    branches:
+      - main
 
 jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
 
-  build-and-deploy:
-
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - name: checkout
-
-        uses: actions/checkout@master
-
-        # 安装依赖
-
-      - name: install
-
-        run: npm install
-
-        # 打包构建
-
-      - name: build
-
-        run: npm run build
-
-        # 部署运行
-
-      - name: Deploy
-
-        uses: peaceiris/actions-gh-pages@v3
-
-
-        with:
-
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          FOLDER: dist
-          publish_dir: ./dist
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          npm install
+          npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: dev # The branch the action should deploy to.
+          folder: dist # The folder the action should deploy.
