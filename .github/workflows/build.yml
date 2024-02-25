@@ -17,15 +17,18 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
       - name: Install Dependencies 🚚
         run: |
           npm ci
           npm install
-        working-directory: ./your-project-directory
 
       - name: Build 🔧
         run: npm run build
-        working-directory: ./your-project-directory
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
