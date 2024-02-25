@@ -19,10 +19,14 @@ jobs:
 
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
-          pnpm install
-          pnpm run build
+          npm install
+          npm run build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          branch: run # The branch the action should deploy to.
+          branch: dev # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
+      - name: Start HTTP server 🌐
+        run: |
+          npm install -g http-server
+          http-server dist
