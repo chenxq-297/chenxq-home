@@ -1,1 +1,0 @@
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/chenxq-home/sw.js', { scope: '/chenxq-home/' })})}
