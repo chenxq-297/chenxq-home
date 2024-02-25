@@ -23,7 +23,3 @@ jobs:
         with:
           branch: dev # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
-      - name: Start HTTP server 🌐
-        run: |
-          npm install -g http-server
-          http-server dist
