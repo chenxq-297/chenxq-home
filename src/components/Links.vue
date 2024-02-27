@@ -87,7 +87,8 @@ const siteIcon = {
 // };
 const jumpLink = (data) => {
   if(data.link){
-    window.open(data.link, "_blank");
+    console.log(import.meta.env.BASE_URL,'import.meta.env.BASE_URL')
+    window.open(import.meta.env.BASE_URL+data.link, "_blank");
   }else{
     ElMessage('文档正在整理中 ~ ')
   }

@@ -114,7 +114,7 @@ export default ({ mode }) =>
     },
     build: {
       minify: "false",
-      target: "es2015",
+      // target: "es2015",
       terserOptions: {
         compress: {
           pure_funcs: ["console.log"],

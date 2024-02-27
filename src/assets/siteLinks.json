@@ -2,7 +2,7 @@
   {
     "icon": "Html5",
     "name": "Html&Css",
-    "link": "./public/html/htmlAndCss.html"
+    "link": "html/htmlAndCss.html"
   },
   {
     "icon": "JsSquare",
