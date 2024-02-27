@@ -7,7 +7,7 @@ on:
     branches: ['main']
 
   # 这个选项可以使你手动在 Action tab 页面触发工作流
-  # workflow_dispatch:
+  workflow_dispatch:
 
 # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages。
 permissions:
@@ -23,6 +23,9 @@ concurrency:
 jobs:
   # 单次部署的工作描述
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -42,14 +45,7 @@ jobs:
         with:
           # Upload dist repository
           path: './dist'
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          ACCESS_TOKEN: ${{ secrets.GH_DOCS }}
-          branch: dev # The branch the action should deploy to.
-          folder: dist # The folder the action should deploy.
-          CLEAN: true
-                # - name: Deploy to GitHub Pages
-      #   id: deployment
-      #   uses: actions/deploy-pages@v2
 
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
