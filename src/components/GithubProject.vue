@@ -44,29 +44,29 @@ import { Pagination, Mousewheel } from "swiper";
 // 仓库数据
 const projectData = [
   {
-    name: "home",
-    author: "imsyy",
+    name: "chenxq-home",
+    author: "chenxq-297",
     desc: "个人主页，我的个人主页，个人主页源码，主页模板，homepage",
   },
   {
-    name: "SPlayer",
-    author: "imsyy",
-    desc: "🎉 一个简约的音乐播放器，支持网易云音乐账号登录，逐字歌词，下载歌曲，展示评论区，音乐云盘及歌单管理，音乐频谱，移动端基础适配 | A minimalist music player",
+    name: "SnowballDB-tool",
+    author: "chenxq-297",
+    desc: "🎉 基于雪球库(睿帆科技)前端参数整合工具",
   },
   {
-    name: "Snavigation",
-    author: "imsyy",
-    desc: "Snavigation 一个简约的起始页 | 支持自定义搜索引擎，自定义快捷方式，自定义壁纸以及数据备份",
+    name: "wy-music-react",
+    author: "chenxq-297",
+    desc: "网易云音乐-web",
   },
   {
-    name: "DailyHotApi",
-    author: "imsyy",
-    desc: "今日热榜 API，一个聚合热门数据的 API 接口，支持 Vercel 部署 | 前端页面：https://github.com/imsyy/DailyHot",
+    name: "trip-h5",
+    author: "chenxq-297",
+    desc: "纯前端旅游门户网站",
   },
   {
-    name: "site-status",
-    author: "imsyy",
-    desc: "📺 一个基于 UptimeRobot API 的在线状态面板 | 站点监测 | 状态检测 | An online status panel based on the UptimeRobot API | UptimeRobot, status, site",
+    name: "vue3-ts-cms",
+    author: "chenxq-297",
+    desc: "📺 后台管理系统",
   },
 ];
 
